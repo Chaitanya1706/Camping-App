@@ -1,0 +1,17 @@
+.check-img{
+    width: 10rem;
+	height: 10rem;
+	padding: 5px;
+	border: 1px solid black;
+	margin: 5px;
+	
+}
+
+.check-img ~ input{
+    display: none;
+}
+
+.addImg input{
+    display: none;
+}
+

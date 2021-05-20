@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>
+    <h1 class="text-center">New CampGround</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="price" class="form-label">Campground Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" name="campground[price]" id="price" placeholder="0.00"
+                        aria-label="price" aria-describedby="price-label" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" type="text" id="location" name="campground[description]" required></textarea>
+            </div>
+
+            <!-- <div class="col-md-12 col-lg-6 my-5 mx-auto"> -->
+
+                <div class="input-group mb-4">
+                  <input type="file" class="form-control input" name="image" id="upload-Images" multiple>            
+                </div>          
+            <!-- </div> -->
+
+            <div class="mb-3">
+                <button class="btn btn-success">Add Campground</button>
+            </div>
+
+
+        </form>
+        <a href="/campgrounds">All Campgrounds</a>
+    </div>
+
+    
